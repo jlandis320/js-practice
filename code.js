@@ -22,9 +22,34 @@ function areYouPlayingBanjo(name) {
 }
 
 // *-------------------------------------------------------------------------------------------------------*//
-
+// * 8 kyu
 // Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
 
 function greet(name) {
   return `Hello, ${name} how are you doing today?`;
+}
+
+// * 8 kyu
+
+// Rock Paper Scissors
+
+// Let's play! You have to return which player won! In case of a draw return Draw!.
+
+// Examples(Input1, Input2 --> Output):
+
+// "scissors", "paper" --> "Player 1 won!"
+// "scissors", "rock" --> "Player 2 won!"
+// "paper", "paper" --> "Draw!"
+
+// * 8kyu
+// Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+var countSheep = function (num){
+
+  let emptystring = ''
+  let sheep = 1
+  for (i = 0; i < num; i++){
+    let count = `${sheep++} sheep...`
+    emptystring = emptystring.concat(count)
+    }
+      return emptystring
 }
