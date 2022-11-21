@@ -52,6 +52,7 @@ const rps = (p1, p2) => {
         return 'Player 2 won!'
       }
   };
+  // neater solutions included polymorphism
 
 // * 8kyu
 // Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
@@ -72,4 +73,28 @@ var countSheep = function (num) {
 //   return str;
 // }
 // resolves 47&48 into one line; resolves 50&51 into one line 
-    // remember: 
+
+// * 8kyu
+
+// Nathan loves cycling.
+
+// Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+
+// You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+// For example:
+
+// time = 3 ----> litres = 1
+
+// time = 6.7---> litres = 3
+
+// time = 11.8--> litres = 5
+
+function litres(time) {
+  //   input is an integer, can assume nonnegative
+  // need to multiply .5 x time
+  //   math.floor to round down? 
+  // return an whole number
+  //   return Math.round(litres * time) <- Math.round() will accurately round, Math.floor() will round down
+    return Math.floor(time * .5)
+  }
