@@ -144,3 +144,36 @@ function countSheeps(arrayOfSheep) {
 // function countSheeps(arrayOfSheeps) {
 //   return arrayOfSheeps.filter(Boolean).length;
 // }
+
+//* 7kyu 
+
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// Example
+
+// filter_list([1,2,'a','b']) == [1,2]
+// filter_list([1,'a','b',0,15]) == [1,0,15]
+// filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+function filter_list(l) {
+  return l.filter(Number.isFinite);
+  // filter returns an array 
+  // Number returns numbers inthe array 
+  // isFinite evaluates 0 as truthy -- 0 is a falsy value to simply using Number wasn't returning 0
+    // could also use .isInteger
+}
+
+// * 7kyu
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+function getCount(str) {
+  return Array.from(str).filter(el => el === "a" || el === "e" || el === "i" || el === "o" || el === "u").length
+}
+
+// could also use a regex and .search() 
+// I liked this better solve: 
+function getCount(str) {
+  return str.split('').filter(c => "aeiouAEIOU".includes(c)).length;
+ }
