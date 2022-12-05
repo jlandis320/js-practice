@@ -177,3 +177,34 @@ function getCount(str) {
 function getCount(str) {
   return str.split('').filter(c => "aeiouAEIOU".includes(c)).length;
  }
+
+// * 7kyu
+
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+// Examples:
+
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+
+function solution(str, ending){
+  let arr = str.split('').splice(str.length - ending.length).join("")
+  return arr === ending ? true : false
+}
+
+function solution(str, ending){
+  str.endsWith(ending)
+}
+// girl. first of all -- there is a string method .endsWith(). 
+
+
+// * 8kyu
+function makeNegative(num) {
+  return num > 0 ? num * -1 : num;
+}
+
+// better solve: 
+function makeNegative(num) {
+  return num < 0 ? num : -num;
+}
+// see how you don't need to multiply by -1? just slap a negative on the front of num and it works
