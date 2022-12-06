@@ -208,3 +208,22 @@ function makeNegative(num) {
   return num < 0 ? num : -num;
 }
 // see how you don't need to multiply by -1? just slap a negative on the front of num and it works
+
+
+function abbrevName(name){
+  let arr = name.toUpperCase().split(" ")
+  
+  let init = []
+  
+  arr.forEach(n => init.push((n[0])))
+  
+  return init = init.join('.')
+}
+
+// * 7 kyu
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+// congrats! this solution was also the top solution and I started learning about regex for real
+  // /[pattern]/flags
+  // if the pattern is written as [^pattern], this returns all the opposite letters. 
