@@ -227,3 +227,14 @@ function disemvowel(str) {
 // congrats! this solution was also the top solution and I started learning about regex for real
   // /[pattern]/flags
   // if the pattern is written as [^pattern], this returns all the opposite letters. 
+
+  // * 7 kyu
+  var isSquare = function(n){
+    return  Math.sqrt(n) === Math.floor(Math.sqrt(n)) ? true : false
+  }
+  // this was so fucking hard for me. didn't know about Math.sqrt() 
+  // better solution:
+  var isSquare = function(n){
+    return Number.isInteger(Math.sqrt(n));
+  }
+  // Number.isInteger checks if a number is an integer -- built in rather than what I did
