@@ -238,3 +238,22 @@ function disemvowel(str) {
     return Number.isInteger(Math.sqrt(n));
   }
   // Number.isInteger checks if a number is an integer -- built in rather than what I did
+  var isSquare = function(n){
+    for (var x = 0; x <= n; x++) {
+      if (n === 0) {
+        return true;
+      } else if (n / x === x) {
+        return true;
+      }
+    }
+    return false;
+  }
+  // how to solve without builtin methods ^
+
+  function squareDigits(num){
+    const arr = Array.from(num.toString())
+    const squares = []
+    arr.forEach(digit => squares.push(digit * digit))
+    let solution = parseInt(squares.join(''))
+    return solution
+  }
